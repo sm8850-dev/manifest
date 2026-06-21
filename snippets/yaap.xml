@@ -11,6 +11,9 @@
            fetch="https://github.com/yaap"
            revision="refs/heads/sixteen" />
 
+  <remote  name="oneplus"
+           fetch="https://github.com/sm8850-dev" />
+
   <!-- General -->
   <project path="art" name="art" remote="yaap" />
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="yaap" />
@@ -38,6 +41,7 @@
   <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="yaap" />
   <project path="device/qcom/sepolicy_vndr/legacy-um" name="device_qcom_sepolicy_vndr_legacy-um" remote="yaap" />
   <project path="device/qcom/sepolicy_vndr/sm8650" name="device_qcom_sepolicy_vndr_sm8650" remote="yaap" />
+  <project path="device/qcom/sepolicy_vndr/sm8850" name="device_qcom_sepolicy_vndr_sm8850" remote="oneplus" groups="qcom,kaanapali-vendor" revision="lineage-23.2-caf-sm8850" />
 
   <!-- External -->
   <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" remote="yaap" />
@@ -88,7 +92,7 @@
   <project path="hardware/google/pixel" name="hardware_google_pixel" remote="yaap" />
   <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" remote="yaap" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="yaap" />
-  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="yaap" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" revision="lineage-23.2" remote="oneplus" />
   <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="yaap" />
   <project path="hardware/interfaces" name="hardware_interfaces" remote="yaap" />
   <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="yaap" />
@@ -103,10 +107,11 @@
   <project path="hardware/qcom-caf/sm8650/dataipa" name="vendor_qcom_opensource_dataipa-sm8650" remote="yaap" />
   <project path="hardware/qcom-caf/sm8650/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr-sm8650" remote="yaap" />
   <project path="hardware/qcom-caf/sm8650/display" name="hardware_qcom-caf_sm8650_display" remote="yaap" />
+  <project path="hardware/qcom-caf/sm8850/audio/primary-hal" name="hardware_qcom_audio-ar" remote="oneplus" groups="qcom,kaanapali-audio" revision="lineage-23.2-caf-sm8850" />
+  <project path="hardware/qcom-caf/thermal" name="hardware_qcom_thermal" remote="oneplus" revision="lineage-23.2" groups="qcom,kaanapali-vendor" />
   <project path="hardware/qcom-caf/sm8650/media" name="hardware_qcom-caf_sm8650_media" remote="yaap" />
   <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="yaap" />
-  <project path="hardware/qcom-caf/thermal" name="hardware_qcom-caf_thermal" remote="yaap" />
-  <project path="hardware/qcom-caf/common" remote="yaap" name="hardware_qcom-caf_common" >
+  <project path="hardware/qcom-caf/common" remote="oneplus" revision="lineage-23.2" name="hardware_qcom-caf_common" >
     <!-- add guards for CAF repositories -->
     <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
@@ -134,6 +139,7 @@
     <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8650/audio/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8650/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8650/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8850/Android.bp" />
   </project>
   <project path="hardware/st/nfc" name="hardware_st_nfc" remote="yaap" />
 
@@ -231,7 +237,7 @@
   <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="yaap" />
   <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="yaap" />
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" remote="yaap" />
-  <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" remote="yaap" />
+  <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" remote="oneplus" revision="lineage-23.2" groups="qcom,kaanapali-vendor" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" remote="yaap" />
   <project path="vendor/google/gms" name="yaosp/vendor_google_gms" remote="gitlab" revision="sixteen" clone-depth="1" />
   <project path="vendor/google/pixel" name="yaosp/vendor_google_pixel" remote="gitlab" revision="sixteen" clone-depth="1" />

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="aosp-common"
+          fetch="https://android.googlesource.com" />
+
+  <remote name="zenin"
+          fetch="https://github.com/sm8850-dev"
+          revision="lineage-23.2" />
+
+  <project name="device_oneplus_macanc"
+           path="device/oneplus/macanc"
+           remote="zenin" />
+
+  <project name="device_oneplus_macanc-kernel"
+           path="device/oneplus/macanc-kernel"
+           remote="zenin" />
+
+  <project name="device_oneplus_sm8850-common"
+           path="device/oneplus/sm8850-common"
+           remote="zenin" />
+
+  <project name="hardware_oplus"
+           path="hardware/oplus"
+           remote="zenin" />
+
+  <project name="kernel/common"
+           path="kernel/oneplus/sm8850"
+           revision="android16-6.12-lts"
+           clone-depth="1"
+           remote="aosp-common" />
+
+</manifest>
